@@ -14,12 +14,11 @@ int getFormat(){
 void getTime(char rt[],int f){
     time_t now=time(NULL);
     struct tm*t=localtime(&now);
-    // char rt[100];
     if(f==1)
     strftime(rt,100," %H:%M:%S",t);
     else
     strftime(rt,100," %I:%M:%S %p",t);
-    // return &rt;
+    
 }
 
 void getDate(char rt[]){
